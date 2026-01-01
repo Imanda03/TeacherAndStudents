@@ -1,6 +1,4 @@
-import { useState } from "react";
 import FeatureHeader from "../../components/common/FeatureHeader";
-import Modal from "../../components/common/Modal";
 import Card from "../../components/common/Card";
 
 const achievements = [

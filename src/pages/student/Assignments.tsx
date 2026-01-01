@@ -8,7 +8,6 @@ import {
   FileText,
   Calendar,
   Trophy,
-  TrendingUp,
   Eye,
   AlertCircle,
   Save,
@@ -16,14 +15,12 @@ import {
 import FeatureHeader from "../../components/common/FeatureHeader";
 import Modal from "../../components/common/Modal";
 import Card from "../../components/common/Card";
-import { useStudentContext } from "../../contexts/StudentContext";
 import Button from "../../components/common/Button";
 import { studentAssignmentsMock } from "../../utils/mockData";
 
 type Assignment = (typeof studentAssignmentsMock.list)[number];
 
 export default function StudentAssignments() {
-  const { assignments: contextAssignments } = useStudentContext();
   const [selectedAssignment, setSelectedAssignment] =
     useState<Assignment | null>(null);
   const [showAssignmentModal, setShowAssignmentModal] = useState(false);
@@ -308,7 +305,7 @@ export default function StudentAssignments() {
                   {assignment?.status === "completed" ? (
                     <>
                       <Button
-                        variant="outline"
+                        variant="secondary"
                         className="flex-1"
                         icon={<Eye className="h-4 w-4" />}
                         onClick={() => openAssignment(assignment)}
@@ -327,7 +324,7 @@ export default function StudentAssignments() {
                         Continue
                       </Button>
                       <Button
-                        variant="outline"
+                        variant="secondary"
                         icon={<Eye className="h-4 w-4" />}
                         onClick={() => openAssignment(assignment)}
                       >

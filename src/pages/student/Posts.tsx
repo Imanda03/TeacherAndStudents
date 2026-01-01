@@ -10,7 +10,6 @@ import {
   CheckCircle,
   XCircle,
   BadgeCheck,
-  TrendingUp,
   Send,
   Edit3,
   User,
@@ -19,7 +18,6 @@ import {
 import FeatureHeader from "../../components/common/FeatureHeader";
 import Modal from "../../components/common/Modal";
 import Card from "../../components/common/Card";
-import { useStudentContext } from "../../contexts/StudentContext";
 import Button from "../../components/common/Button";
 import { studentPostsMock } from "../../utils/mockData";
 
@@ -28,7 +26,6 @@ type Post =
   | (typeof studentPostsMock.explorePosts)[number];
 
 export default function StudentPosts() {
-  const { posts: contextPosts } = useStudentContext();
   const [activeTab, setActiveTab] = useState<"explore" | "myPosts">("explore");
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
@@ -395,7 +392,7 @@ export default function StudentPosts() {
 
           <div className="flex gap-3 pt-4">
             <Button
-              variant="outline"
+              variant="secondary"
               className="flex-1"
               onClick={() => setShowCreateModal(false)}
             >
