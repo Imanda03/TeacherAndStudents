@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Users, MessageCircle } from "lucide-react";
 import FeatureHeader from "../../components/common/FeatureHeader";
-import Modal from "../../components/common/Modal";
 import Card from "../../components/common/Card";
 import Button from "../../components/common/Button";
 

@@ -113,7 +113,10 @@ export default function StudentLessons() {
         description="Browse subjects, chapters, content, and mind maps."
         additionalActions={
           selectedChapter ? (
-            <Button variant="outline" onClick={() => setSelectedChapter(null)}>
+            <Button
+              variant="secondary"
+              onClick={() => setSelectedChapter(null)}
+            >
               Back to Chapters
             </Button>
           ) : null
@@ -203,7 +206,6 @@ export default function StudentLessons() {
                   <div className="flex gap-2">
                     <Button
                       variant="ghost"
-                      size="sm"
                       className="flex-1"
                       icon={<BookOpenCheck className="h-4 w-4" />}
                       onClick={() => openMindMap(chap)}
@@ -212,7 +214,6 @@ export default function StudentLessons() {
                     </Button>
                     <Button
                       variant="primary"
-                      size="sm"
                       className="flex-1"
                       onClick={() => setSelectedChapter(chap)}
                     >
@@ -293,7 +294,7 @@ export default function StudentLessons() {
                       ) : (
                         <Circle className="h-5 w-5 text-gray-300" />
                       )}
-                      <Button variant="ghost" size="sm">
+                      <Button variant="ghost">
                         {material?.type === "video" ? "Watch" : "View"}
                       </Button>
                     </div>
